@@ -1,5 +1,20 @@
-## Next.js App Router Course - Starter
+//CAMBIAR FONT GOOGLE
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+Para cambiar la fuente de letras dirijete a 
+------"/app/ui/fonts.ts"
+Donde encontraras que fuentes estas exportando
+lo cual agregaremos al "<body>" que se encuentra en "/app/layout.tsx"
 
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+
+CAPITULO 4
+Creacion del disenio del panel de Control
+
+ui/dashboard/navlinks  ---> iconos https://heroicons.com/
+
+
+
+
+
+
+Estilar
+Navbar /app/page.tsx
