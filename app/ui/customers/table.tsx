@@ -2,20 +2,24 @@ import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 import {
-  CustomersTableType,
+  // CustomersTableType,
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
+
 
 export default async function CustomersTable({
   customers,
 }: {
   customers: FormattedCustomersTable[];
 }) {
+
   return (
     <div className="w-full">
+
       <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
+
       <Search placeholder="Search customers..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
@@ -23,6 +27,7 @@ export default async function CustomersTable({
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
               <div className="md:hidden">
                 {customers?.map((customer) => (
+
                   <div
                     key={customer.id}
                     className="mb-2 w-full rounded-md bg-white p-4"
@@ -41,11 +46,14 @@ export default async function CustomersTable({
                             <p>{customer.name}</p>
                           </div>
                         </div>
+
                         <p className="text-sm text-gray-500">
                           {customer.email}
                         </p>
+                        
                       </div>
                     </div>
+
                     <div className="flex w-full items-center justify-between border-b py-5">
                       <div className="flex w-1/2 flex-col">
                         <p className="text-xs">Pending</p>
@@ -56,12 +64,15 @@ export default async function CustomersTable({
                         <p className="font-medium">{customer.total_paid}</p>
                       </div>
                     </div>
+
                     <div className="pt-4 text-sm">
                       <p>{customer.total_invoices} invoices</p>
                     </div>
                   </div>
+
                 ))}
               </div>
+
               <table className="hidden min-w-full rounded-md text-gray-900 md:table">
                 <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
                   <tr>
@@ -114,6 +125,7 @@ export default async function CustomersTable({
                   ))}
                 </tbody>
               </table>
+
             </div>
           </div>
         </div>

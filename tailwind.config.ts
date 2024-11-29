@@ -17,6 +17,11 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        blue: {
+          400: '#25ddfe',
+          500: '#19a6bf',
+          600: '#008dde',
+        },
       },
     },
     keyframes: {

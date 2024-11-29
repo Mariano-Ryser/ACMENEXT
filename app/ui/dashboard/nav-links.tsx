@@ -2,6 +2,7 @@
 import {
   UserGroupIcon,
   HomeIcon,
+  MusicalNoteIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -24,6 +25,10 @@ const links = [
     href: '/dashboard/customers',
     icon: UserGroupIcon
     },
+    { name: 'Sec',
+      href: '/',
+      icon: MusicalNoteIcon
+      },
     
 ];
 
@@ -40,7 +45,7 @@ export default function NavLinks() {
             className={clsx(
               'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-100 p-3 text-sm font-medium hover:bg-sky-200 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-blue-200 text-green-900': pathname === link.href, //marca en azul en el link que navegas
+                'bg-blue-300 text-green-900': pathname === link.href, //marca en azul en el link que navegas
               },
             )}>
             <LinkIcon className="w-6" />
