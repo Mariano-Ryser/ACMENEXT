@@ -4,6 +4,7 @@ import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache'; // borrar este caché y activar una nueva solicitud al servidor.
 import { redirect } from 'next/navigation';
 
+// ZOD VALIDACIONES
 const FormSchema = z.object({
     id: z.string(),
     customerId: z.string(),
@@ -12,16 +13,18 @@ const FormSchema = z.object({
     date: z.string(),
   });
 
+  
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
-
 export async function createInvoice(formData: FormData) {
     
     const { customerId, amount, status } = CreateInvoice.parse({
+
         customerId: formData.get('customerId'),
         amount: formData.get('amount'),
         status: formData.get('status'),
       });
     const amountInCents = amount * 100;
+
     const date = new Date().toISOString().split('T')[0];
 
     try {
@@ -38,12 +41,12 @@ export async function createInvoice(formData: FormData) {
       };
     }  
 revalidatePath('/dashboard/invoices'); //se volverá a validar la ruta y se obtendrán datos nuevos del servidor.
-//blueirigir al usuario a...
+//redirigir al usuario a...
 redirect('/dashboard/invoices'); 
   }
 
+  // Use Zod to update the expected types
 const UpdateInvoice = FormSchema.omit({ id: true, date: true });
- 
 export async function updateInvoice(id: string, formData: FormData) {
     
   const { customerId, amount, status } = UpdateInvoice.parse({
@@ -65,20 +68,20 @@ export async function updateInvoice(id: string, formData: FormData) {
         message: 'Database Error: Failed to Update Invoice.',
     }};
     revalidatePath('/dashboard/invoices');
-    //blueirigir al usuario a...
+    //redirigir al usuario a...
   redirect('/dashboard/invoices');
 }
 
+
 export async function deleteInvoice(id: string) {
     try {
-        // Intentar eliminar la factura
         await sql`DELETE FROM invoices WHERE id = ${id}`;
         
+        revalidatePath('/dashboard/invoices'); 
         
     } catch (error) {
         return {
             message: 'Database Error: Failed to Delete Invoice.',
           };
        }
-    revalidatePath('/dashboard/invoices'); 
 }
