@@ -26,7 +26,7 @@ const links = [
     icon: UserGroupIcon
     },
     { name: 'Sec',
-      href: '/',
+      href: '/dashboard/customers',
       icon: MusicalNoteIcon
       },
     

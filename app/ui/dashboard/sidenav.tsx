@@ -2,6 +2,7 @@ import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
+import { signOut } from '@/auth';
 
 export default function SideNav() {
   return (
@@ -25,7 +26,8 @@ export default function SideNav() {
         <div className="hidden h-auto w-full grow rounded-md
          bg-gray-50 md:block"></div>
 
-        <form>
+          <form
+          action={async () => {'use server'; await signOut();}}>
 
           <button className="flex h-[48px] w-full grow items-center
            justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm
