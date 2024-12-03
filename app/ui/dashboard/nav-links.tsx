@@ -25,6 +25,10 @@ const links = [
     href: '/dashboard/customers',
     icon: UserGroupIcon
     },
+    { name: 'Debts',
+      href: '/dashboard/debts',
+      icon: UserGroupIcon
+      },
     { name: 'Sec',
       href: '/dashboard/customers',
       icon: MusicalNoteIcon

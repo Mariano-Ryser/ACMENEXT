@@ -21,14 +21,4 @@ await Promise.all --- Comience a ejecutar todas las búsquedas de datos al mismo
 
 
 
-
-
--------------------------------------------------------
-
-
-
-Cheapter 12 -> 3. Extract the data from formData
-
-
-
-Cheapter 15 -> Actualización del formulario de inicio de sesión
+CREAR CLAVE - openssl rand -base64 32   --introducir en terminal

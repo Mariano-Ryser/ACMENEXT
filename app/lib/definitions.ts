@@ -9,13 +9,37 @@ export type User = {
   password: string;
 };
 
+
+// CUSTOMERSS      // CUSTOMERSS      // CUSTOMERSS      
+// CUSTOMERSS      // CUSTOMERSS      // CUSTOMERSS      
 export type Customer = {
   id: string;
   name: string;
   email: string;
   image_url: string;
 };
+export type CustomersTableType = {
+  id: string;
+  name: string;
+  email: string;
+  image_url: string;
+  total_invoices: number;
+  total_pending: number;
+  total_paid: number;
+};
+export type CustomerField = {
+  id: string;
+  name: string;
+};
+// REVENUEE       // REVENUEE       // REVENUEE       }
+// REVENUEE       // REVENUEE       // REVENUEE       
+export type Revenue = {
+  month: string;
+  revenue: number;
+};
 
+// INVOICES        // INVOICES        // INVOICES        
+// INVOICES        // INVOICES        // INVOICES           
 export type Invoice = {
   id: string;
   customer_id: string;
@@ -24,11 +48,6 @@ export type Invoice = {
   // In TypeScript, this is called a string union type.
   // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
   status: 'pending' | 'paid';
-};
-
-export type Revenue = {
-  month: string;
-  revenue: number;
 };
 
 export type LatestInvoice = {
@@ -54,16 +73,65 @@ export type InvoicesTable = {
   amount: number;
   status: 'pending' | 'paid';
 };
-
-export type CustomersTableType = {
+export type InvoiceForm = {
   id: string;
+  customer_id: string;
+  amount: number;
+  status: 'pending' | 'paid';
+};
+
+
+// DEBTS        // DEBTS        // DEBTS        
+// DEBTS        // DEBTS        // DEBTS           
+export type Debt = {
+  id: string;
+  customer_id: string;
+  amount: number;
+  date: string;
+  // In TypeScript, this is called a string union type.
+  // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+  status: 'pending' | 'paid';
+};
+export type LatestDebt = {
+  id: string;
+  name: string;
+  image_url: string;
+  email: string;
+  amount: string;
+};
+export type LatestDebtRaw = Omit<LatestDebt, 'amount'> & {
+  amount: number;
+};
+export type DebtsTable = {
+  id: string;
+  customer_id: string;
   name: string;
   email: string;
   image_url: string;
-  total_invoices: number;
-  total_pending: number;
-  total_paid: number;
+  date: string;
+  amount: number;
+  status: 'pending' | 'paid';
 };
+export type DebtForm = {
+  id: string;
+  customer_id: string;
+  amount: number;
+  status: 'pending' | 'paid';
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export type FormattedCustomersTable = {
   id: string;
@@ -75,14 +143,7 @@ export type FormattedCustomersTable = {
   total_paid: string;
 };
 
-export type CustomerField = {
-  id: string;
-  name: string;
-};
 
-export type InvoiceForm = {
-  id: string;
-  customer_id: string;
-  amount: number;
-  status: 'pending' | 'paid';
-};
+
+
+ 
