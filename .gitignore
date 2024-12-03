@@ -16,7 +16,7 @@
 
 # production
 /build
-
+lib/placeholder-data.ts
 # misc
 .DS_Store
 *.pem
