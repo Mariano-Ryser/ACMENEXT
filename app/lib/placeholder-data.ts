@@ -35,61 +35,61 @@ const customers = [
     name: 'Mauro Damiano',
     email: 'mauroDamiano@gmail.com',
     image_url: '/customers/mauroDamiano.png',
-  }
-  // {
-  //   id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
-  //   name: 'Delba de Oliveira',
-  //   email: 'delba@oliveira.com',
-  //   image_url: '/customers/delba-de-oliveira.png',
-  // },
-  // { 
-  //   id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
-  //   name: 'Lee Robinson',
-  //   email: 'lee@robinson.com',
-  //   image_url: '/customers/me2.png',
-  // },
-  // {
-  //   id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
-  //   name: 'Michael Novotny',
-  //   email: 'michael@novotny.com',
-  //   image_url: '/customers/michael-novotny.png',
-  // },
-  // {
-  //   id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
-  //   name: 'Amy Burns',
-  //   email: 'amy@burns.com',
-  //   image_url: '/customers/amy-burns.png',
-  // },
-  // {
-  //   id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
-  //   name: 'Balazs Orban',
-  //   email: 'balazs@orban.com',
-  //   image_url: '/customers/balazs-orban.png',
-  // },
-  // {
-  //   id: '13D07535-C59E-4157-A011-F8D2EF4E0CCC',
-  //   name: 'Mariano Ryser',
-  //   email: 'rysermariano@gmail.com',
-  //   image_url: '/customers/me4.png',
-  // },
-  // {
-  //   id: '13D07535-C59E-4157-A011-F8D2EF4E0AAA',
-  //   name: 'Nicolas Garcia',
-  //   email: 'nicoGarcia@gmail.com',
-  //   image_url: '/customers/me3.png',
-  // },
-  // {
-  //   id: '13D07535-C59E-4157-A011-F8D2EF4E0BBB',
-  //   name: 'Neitor Datero',
-  //   email: 'NeitorTremi@gmail.com',
-  //   image_url: '/customers/me2.png',
-  // },
-  // {
-  //   id: 'CC27C14A-0ACF-4F4B-C7C9-D55686C144B7',
-  //   name: 'Zeep',
-  //   email: 'zeep2025@gmail.com',
-  //   image_url: '/customers/me1.png',
-  // },
+  },
+  {
+    id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
+    name: 'Delba de Oliveira',
+    email: 'delba@oliveira.com',
+    image_url: '/customers/delba-de-oliveira.png',
+  },
+  { 
+    id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
+    name: 'Lee Robinson',
+    email: 'lee@robinson.com',
+    image_url: '/customers/me2.png',
+  },
+  {
+    id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
+    name: 'Michael Novotny',
+    email: 'michael@novotny.com',
+    image_url: '/customers/michael-novotny.png',
+  },
+  {
+    id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
+    name: 'Amy Burns',
+    email: 'amy@burns.com',
+    image_url: '/customers/amy-burns.png',
+  },
+  {
+    id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
+    name: 'Balazs Orban',
+    email: 'balazs@orban.com',
+    image_url: '/customers/balazs-orban.png',
+  },
+  {
+    id: '13D07535-C59E-4157-A011-F8D2EF4E0CCC',
+    name: 'Mariano Ryser',
+    email: 'rysermariano@gmail.com',
+    image_url: '/customers/me4.png',
+  },
+  {
+    id: '13D07535-C59E-4157-A011-F8D2EF4E0AAA',
+    name: 'Nicolas Garcia',
+    email: 'nicoGarcia@gmail.com',
+    image_url: '/customers/me3.png',
+  },
+  {
+    id: '13D07535-C59E-4157-A011-F8D2EF4E0BBB',
+    name: 'Neitor Datero',
+    email: 'NeitorTremi@gmail.com',
+    image_url: '/customers/me2.png',
+  },
+  {
+    id: 'CC27C14A-0ACF-4F4B-C7C9-D55686C144B7',
+    name: 'Zeep',
+    email: 'zeep2025@gmail.com',
+    image_url: '/customers/me1.png',
+  },
 ];
 
 const invoices = [
